@@ -47,10 +47,24 @@
 </MudText>
 
 <br />
-<MudText Typo="Typo.h6" GutterBottom="true">InteractiveAuto</MudText>
-<MudText Typo="Typo.body2">
-    A discussion on how to achieve this can be found here:
-    <MudLink Href="https://github.com/dotnet/aspnetcore/issues/51468#issue-1950424116" Target="_blank" Typo="Typo.body2" Color="Color.Primary">
-        More details
-    </MudLink>
-</MudText>
+<MudCarousel Class="mud-width-full" Style="height:1080px;" TData="object">
+    <MudCarouselItem>
+        <div style="position:relative; width:100%; padding-top:56.25%;">
+            @* 16:9 ratio = 9/16 = 0.5625 *@
+            <img src="images/Banana Forest 1.PNG" alt="Game Screenshot 1"
+                 style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem>
+        <div style="position:relative; width:100%; padding-top:56.25%;">
+            <img src="images/Banana Forest 2.PNG" alt="Game Screenshot 2"
+                 style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem>
+        <div style="position:relative; width:100%; padding-top:56.25%;">
+            <img src="images/Banana Forest 1.PNG" alt="Game Screenshot 3"
+                 style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
