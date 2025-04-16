@@ -29,7 +29,7 @@
 
 @code {
     private bool _drawerOpen = true;
-    private bool _isDarkMode = true;
+    private bool _isDarkMode = false;
     private MudTheme? _theme = null;
 
     protected override void OnInitialized()
@@ -56,6 +56,7 @@
 
     private readonly PaletteLight _lightPalette = new()
     {
+        Primary = "#e67e22",
         Black = "#110e2d",
         AppbarText = "#424242",
         AppbarBackground = "rgba(255,255,255,0.8)",
@@ -66,7 +67,7 @@
 
     private readonly PaletteDark _darkPalette = new()
     {
-        Primary = "#7e6fff",
+        Primary = "#e67e22",
         Surface = "#1e1e2d",
         Background = "#1a1a27",
         BackgroundGray = "#151521",
