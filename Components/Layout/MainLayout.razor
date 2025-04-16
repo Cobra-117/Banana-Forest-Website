@@ -40,8 +40,23 @@
         {
             PaletteLight = _lightPalette,
             PaletteDark = _darkPalette,
-            LayoutProperties = new LayoutProperties()
-        };
+            LayoutProperties = new LayoutProperties(),
+                Typography = new Typography
+                {
+                    Default = new DefaultTypography()
+                    {
+                        FontFamily = new[] { "Montserrat", "Helvetica", "Arial", "sans-serif" },
+                        FontSize = "1rem"
+                    },
+                    H1 = new H1Typography { FontFamily = new[] { "Montserrat" }, FontWeight = "700" },
+                    H2 = new H2Typography { FontFamily = new[] { "Montserrat" }, FontWeight = "600" },
+                    H3 = new H3Typography { FontFamily = new[] { "Montserrat" } },
+                    Body1 = new Body1Typography { FontFamily = new[] { "Montserrat" }, FontSize = "1rem" },
+                    Button = new ButtonTypography { FontFamily = new[] { "Montserrat" }, TextTransform = "none" },
+                    // ...optional: override more styles
+                }
+
+            };
     }
 
     private void DrawerToggle()
