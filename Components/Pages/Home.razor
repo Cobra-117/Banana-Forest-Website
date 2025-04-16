@@ -47,24 +47,48 @@
 </MudText>
 
 <br />
+
 <MudCarousel Class="mud-width-full" Style="height:1080px;" TData="object">
-    <MudCarouselItem>
-        <div style="position:relative; width:100%; padding-top:56.25%;">
-            @* 16:9 ratio = 9/16 = 0.5625 *@
-            <img src="images/Banana Forest 1.PNG" alt="Game Screenshot 1"
-                 style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+    <BulletTemplate Context="selected">
+        <div Class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@(selected ? Icons.Material.Filled.Circle : Icons.Material.Outlined.Circle)" Color="@Color.Primary" />
+            </span>
         </div>
-    </MudCarouselItem>
-    <MudCarouselItem>
-        <div style="position:relative; width:100%; padding-top:56.25%;">
-            <img src="images/Banana Forest 2.PNG" alt="Game Screenshot 2"
-                 style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+    </BulletTemplate>
+    <PreviousButtonTemplate>
+        <div Class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Class="mud-ripple mud-ripple-icon mud-icon-button-size-large" Icon="@Icons.Material.Filled.ArrowLeft" Color="@Color.Primary" />
+            </span>
         </div>
-    </MudCarouselItem>
-    <MudCarouselItem>
-        <div style="position:relative; width:100%; padding-top:56.25%;">
-            <img src="images/Banana Forest 1.PNG" alt="Game Screenshot 3"
-                 style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+    </PreviousButtonTemplate>
+    <NextButtonTemplate>
+        <div Class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Class="mud-ripple mud-ripple-icon mud-icon-button-size-large" Icon="@Icons.Material.Filled.ArrowRight" Color="@Color.Primary" />
+            </span>
         </div>
-    </MudCarouselItem>
+    </NextButtonTemplate>
+    <ChildContent>
+        <MudCarouselItem>
+            <div style="position:relative; width:100%; padding-top:56.25%;">
+                @* 16:9 ratio = 9/16 = 0.5625 *@
+                <img src="images/Banana Forest 1.PNG" alt="Game Screenshot 1"
+                     style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem>
+            <div style="position:relative; width:100%; padding-top:56.25%;">
+                <img src="images/Banana Forest 2.PNG" alt="Game Screenshot 2"
+                     style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem>
+            <div style="position:relative; width:100%; padding-top:56.25%;">
+                <img src="images/Banana Forest 1.PNG" alt="Game Screenshot 3"
+                     style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" />
+            </div>
+        </MudCarouselItem>
+    </ChildContent>
 </MudCarousel>
