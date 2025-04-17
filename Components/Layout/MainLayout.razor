@@ -33,6 +33,7 @@
     private bool _drawerOpen = true;
     private bool _isDarkMode = false;
     private MudTheme? _theme = null;
+    private MudBlazor.Utilities.MudColor GreyBackground = "#f4f2ee";
 
     protected override void OnInitialized()
     {
@@ -74,22 +75,23 @@
     private readonly PaletteLight _lightPalette = new()
     {
         Primary = "#e67e22",
+        Background = Colors.Green.Lighten5,
         Black = "#110e2d",
-        AppbarText = "#424242",
-        AppbarBackground = "rgba(255,255,255,0.8)",
-        DrawerBackground = "#ffffff",
+            AppbarText = Colors.Green.Lighten5,
+            AppbarBackground = Colors.Amber.Darken3,
+            DrawerBackground = Colors.Green.Lighten5,
         GrayLight = "#e8e8e8",
         GrayLighter = "#f9f9f9",
     };
 
     private readonly PaletteDark _darkPalette = new()
     {
+            AppbarText = Colors.Green.Lighten5,
+            AppbarBackground = Colors.Amber.Darken3,
         Primary = "#e67e22",
         Surface = "#1e1e2d",
         Background = "#1a1a27",
         BackgroundGray = "#151521",
-        AppbarText = "#92929f",
-        AppbarBackground = "rgba(26,26,39,0.8)",
         DrawerBackground = "#1a1a27",
         ActionDefault = "#74718e",
         ActionDisabled = "#9999994d",
