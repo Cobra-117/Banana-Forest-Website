@@ -1,0 +1,133 @@
+﻿@page "/enemies"
+
+<PageTitle>Enemies</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Enemies</MudText>
+<MudText Class="mb-8">
+    In Banana Forest 2, enemies can take various shapes thanks to an unique combination system <br />
+    Like your favorite pokebowl restaurant the enemies come with different basis on which different component will be attached <br />
+    This system allows for dozens of possible combinations!
+</MudText>
+
+<MudAlert Severity="Severity.Normal" ContentAlignment="HorizontalAlignment.Start">
+    The differents types are progressively introduced as you play the game, dont expect to see them all at the beginning!
+</MudAlert>
+<br />
+<br />
+<MudText Typo="Typo.h5" GutterBottom="true">Basis</MudText>
+<br />
+<MudCarousel Class="mud-width-full" Style="height:250px;" TData="object">
+    <BulletTemplate Context="selected">
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@(selected ? Icons.Material.Filled.Circle : Icons.Material.Outlined.Circle)" Color="@Color.Primary" />
+            </span>
+        </div>
+    </BulletTemplate>
+
+    <PreviousButtonTemplate>
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@Icons.Material.Filled.ArrowLeft" Color="@Color.Primary" />
+            </span>
+        </div>
+    </PreviousButtonTemplate>
+
+    <NextButtonTemplate>
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@Icons.Material.Filled.ArrowRight" Color="@Color.Primary" />
+            </span>
+        </div>
+    </NextButtonTemplate>
+
+    <ChildContent>
+        <MudCarouselItem>
+            <div class="carousel-container">
+                <div class="carousel-image-wrapper">
+                    <img src="images/enemy single sprite.png" alt="basic frame" class="carousel-image" />
+                </div>
+                <div class="carousel-caption">The basic enemy frame is the most common one. It offers average speed and hp</div>
+            </div>
+        </MudCarouselItem>
+    </ChildContent>
+</MudCarousel>
+
+<br />
+<MudText Typo="Typo.h5" GutterBottom="true">Components</MudText>
+<br />
+<MudCarousel Class="mud-width-full" Style="height:250px;" TData="object">
+    <BulletTemplate Context="selected">
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@(selected ? Icons.Material.Filled.Circle : Icons.Material.Outlined.Circle)" Color="@Color.Primary" />
+            </span>
+        </div>
+    </BulletTemplate>
+
+    <PreviousButtonTemplate>
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@Icons.Material.Filled.ArrowLeft" Color="@Color.Primary" />
+            </span>
+        </div>
+    </PreviousButtonTemplate>
+
+    <NextButtonTemplate>
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@Icons.Material.Filled.ArrowRight" Color="@Color.Primary" />
+            </span>
+        </div>
+    </NextButtonTemplate>
+
+    <ChildContent>
+        <MudCarouselItem>
+            <div class="carousel-container">
+                <div class="carousel-image-wrapper">
+                    <img src="images/enemy single sprite.png" alt="basic frame" class="carousel-image" />
+                </div>
+                <div class="carousel-caption">The scoop component allows enemies to destroy trees faster</div>
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem>
+            <div class="carousel-container">
+                <div class="carousel-image-wrapper">
+                    <img src="images/enemy single sprite.png" alt="basic frame" class="carousel-image" />
+                </div>
+                <div class="carousel-caption">The shield protect the enemies from physical damages</div>
+            </div>
+        </MudCarouselItem>
+    </ChildContent>
+</MudCarousel>
+
+<style scoped>
+    .carousel-container {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .carousel-image-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 128px;
+        height: auto;
+        max-height: 128px;
+        margin: 0 auto;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .carousel-caption {
+        margin-top: 6px;
+        font-size: 0.9rem;
+        color: #555;
+        text-align: center;
+        max-width: 100%;
+    }
+</style>
+
