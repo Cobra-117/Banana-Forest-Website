@@ -1,0 +1,106 @@
+﻿@page "/defenses"
+
+<PageTitle>Defenses</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Defenses</MudText>
+<div class="horizontal-layout">
+    <img src="images/Banana Forest 1.PNG" alt="Game Screenshot 1" class="screenshot-img" />
+    <MudText Typo="Typo.h6" Align="Align.Justify" Style="width:600px; padding-top: 50px">
+        In Banana Forest 2, enemies can take various shapes thanks to an unique combination system.
+        Like your favorite pokebowl restaurant the enemies come with different basis on which different component will be attached.
+        This system allows for dozens of possible combinations!
+    </MudText>
+
+</div>
+
+
+<MudAlert Severity="Severity.Normal" ContentAlignment="HorizontalAlignment.Start">
+    The differents types are progressively introduced as you play the game, dont expect to see them all at the beginning!
+</MudAlert>
+<br />
+<br />
+<MudText Typo="Typo.h5" GutterBottom="true">Basis</MudText>
+<br />
+<MudCarousel Class="mud-width-full" Style="height:250px;" TData="object">
+    <BulletTemplate Context="selected">
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@(selected ? Icons.Material.Filled.Circle : Icons.Material.Outlined.Circle)" Color="@Color.Primary" />
+            </span>
+        </div>
+    </BulletTemplate>
+
+    <PreviousButtonTemplate>
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@Icons.Material.Filled.ArrowLeft" Color="@Color.Primary" />
+            </span>
+        </div>
+    </PreviousButtonTemplate>
+
+    <NextButtonTemplate>
+        <div class="mud-button-root mud-icon-button mud-icon-button-color-inherit mud-ripple mud-ripple-icon">
+            <span class="mud-icon-button-label">
+                <MudIcon Icon="@Icons.Material.Filled.ArrowRight" Color="@Color.Primary" />
+            </span>
+        </div>
+    </NextButtonTemplate>
+
+    <ChildContent>
+        <MudCarouselItem>
+            <div class="carousel-container">
+                <div class="carousel-image-wrapper">
+                    <img src="images/enemy single sprite.png" alt="basic frame" class="carousel-image" />
+                </div>
+                <div class="carousel-caption">The basic enemy frame is the most common one. It offers average speed and hp</div>
+            </div>
+        </MudCarouselItem>
+    </ChildContent>
+</MudCarousel>
+
+
+
+
+<style scoped>
+    .carousel-container {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .carousel-image-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 128px;
+        height: auto;
+        max-height: 128px;
+        margin: 0 auto;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .carousel-caption {
+        margin-top: 6px;
+        font-size: 0.9rem;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .horizontal-layout {
+        display: flex;
+        align-items: flex-start; /* align top of text and image */
+        justify-content: center;
+        gap: 24px; /* space between text and image */
+        flex-wrap: wrap; /* allow wrapping on smaller screens */
+    }
+
+    .screenshot-img {
+        max-width: 100%;
+        height: auto;
+        max-height: 300px; /* optional: to constrain image height */
+    }
+</style>
+
